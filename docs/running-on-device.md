@@ -55,9 +55,9 @@ Register for an [Apple developer account](https://developer.apple.com/) if you d
 
 Select your project in the Xcode Project Navigator, then select your main target (it should share the same name as your project). Look for the "General" tab. Go to "Signing" and make sure your Apple developer account or team is selected under the Team dropdown. Do the same for the tests target (it ends with Tests, and is below your main target).
 
-![](/react-native/docs/assets/RunningOnDeviceCodeSigning.png)
+**Repeat** this step for the **Tests** target in your project.
 
-Repeat this step for the Tests target in your project.
+![](/react-native/docs/assets/RunningOnDeviceCodeSigning.png)
 
 ### 3. Build and Run your app
 
@@ -144,14 +144,14 @@ Seeing `device` in the right column means the device is connected. You must have
 Type the following in your command prompt to install and launch your app on the device:
 
 ```
-$ react-native run-android
+$ npx react-native run-android
 ```
 
 > If you get a "bridge configuration isn't available" error, see [Using adb reverse](running-on-device.md#method-1-using-adb-reverse-recommended).
 
 > Hint
 >
-> You can also use the `React Native CLI` to generate and run a `Release` build (e.g. `react-native run-android --variant=release`).
+> You can also use the `React Native CLI` to generate and run a `Release` build (e.g. `npx react-native run-android --variant=release`).
 
 <block class="mac windows linux android ios" />
 
@@ -306,7 +306,7 @@ The static bundle is built every time you target a physical device, even in Debu
 
 You can now build your app for release by tapping `⌘B` or selecting **Product** → **Build** from the menu bar. Once built for release, you'll be able to distribute the app to beta testers and submit the app to the App Store.
 
-> You can also use the `React Native CLI` to perform this operation using the option `--configuration` with the value `Release` (e.g. `react-native run-ios --configuration Release`).
+> You can also use the `React Native CLI` to perform this operation using the option `--configuration` with the value `Release` (e.g. `npx react-native run-ios --configuration Release`).
 
 <block class="mac windows linux android" />
 

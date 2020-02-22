@@ -9,23 +9,27 @@ The most fundamental component for building a UI, `View` is a container that sup
 
 This example creates a `View` that wraps two boxes with color and a text component in a row with padding.
 
-```jsx
-class ViewBoxesWithColorAndText extends Component {
-  render() {
-    return (
-      <View
-        style={{
-          flexDirection: 'row',
-          height: 100,
-          padding: 20,
-        }}>
-        <View style={{backgroundColor: 'blue', flex: 0.3}} />
-        <View style={{backgroundColor: 'red', flex: 0.5}} />
-        <Text>Hello World!</Text>
-      </View>
-    );
-  }
-}
+```SnackPlayer name=Example%20Code
+import React from "react";
+import { View, Text } from "react-native";
+
+const ViewBoxesWithColorAndText = () => {
+  return (
+    <View
+      style={{
+        flexDirection: "row",
+        height: 100,
+        padding: 20
+      }}
+    >
+      <View style={{ backgroundColor: "blue", flex: 0.3 }} />
+      <View style={{ backgroundColor: "red", flex: 0.5 }} />
+      <Text>Hello World!</Text>
+    </View>
+  );
+};
+
+export default ViewBoxesWithColorAndText;
 ```
 
 > `View`s are designed to be used with [`StyleSheet`](style.md) for clarity and performance, although inline styles are also supported.
